@@ -15,9 +15,9 @@ mongoose.connect(process.env.uri,{useNewUrlParser: true, useUnifiedTopology: tru
 mongoose.connection.on('error',err => {
   console.log(`DB connection error: ${err.message}`);
 });
-const userRoutes = require("./routes/user");
-const authRoutes = require("./routes/auth");
-const postRoutes = require("./routes/notes");
+const userRoutes = require("./Routes/user");
+const authRoutes = require("./Routes/auth");
+const postRoutes = require("./Routes/notes");
 
 app.use(bodyparser.json())
 app.use(cookieparser())
